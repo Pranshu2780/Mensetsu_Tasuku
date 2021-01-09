@@ -1,0 +1,38 @@
+body{
+    background-color:#222539;
+}
+
+.input{       /* Whole Text */
+   color: white;
+   text-align: center;
+}
+
+.text{               /* The Input Box */
+    margin-left: 1rem;
+    border-radius: 12px;
+    outline: none;
+    padding: .3rem;
+    color: green;
+}
+
+.btn{               /* Submit Button */
+    padding:.2rem;
+    padding-left:5px;
+    padding-right:5px;
+    margin-left:.5rem;
+    border-radius:8px;
+    border:none;
+    outline: none;
+    background-color:#FFC400;
+}
+
+.btn:hover {      /* On touching submit button */
+     background-color:#2586C3 ;
+     color: white;
+     cursor: pointer;
+}
+
+.history{
+    align-items: center;
+    
+}
