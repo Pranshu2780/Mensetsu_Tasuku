@@ -11,15 +11,19 @@ const TextReducer = () =>{
   ];
 };
 
-const SelectedTextReducer = (SelectedText=null,action) =>{
+const SelectedTextReducer = (SelectedText=[],action) =>{
   if(action.type ==='TEXT'){
-      return action.payload;
+      return [
+          ... SelectedText,{
+              text: action.text
+          }
+      ];
   }
 
   return SelectedText;
 };
 
 export default combineReducers({
-    display : SelectedTextReducer,
-    text : TextReducer  
+    text : SelectedTextReducer,
+    text1 : TextReducer  
 });

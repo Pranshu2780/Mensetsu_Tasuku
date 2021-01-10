@@ -9,6 +9,7 @@ class TextList extends React.Component{
               <div key={tex.title}>
                    <div> 
                         {tex.title}
+                        {}
                         {/* <button onCilck={()=>{this.props.SelectedText(tex)}} >Click me</button> */}
                    </div>
               </div>

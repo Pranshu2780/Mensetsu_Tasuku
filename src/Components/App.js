@@ -4,24 +4,13 @@ import styles from '../CSS/App.css';
 import { SelectText } from '../actions';
 import { connect } from 'react-redux';
 import TextList from './TextList';
-
+import Add from '../Containers/Add';
 const App=()=>{
   
    
   return <div> {/* Opening of Returning Div */}
      
-      <div className="input">  {/* opening of Input Div */}
-      
-         <label className="label"> Enter the Text :
-             <input className="text" 
-             />
-         </label>
-      
-         <button className="btn" >Submit</button>
-      
-        
-      </div>  {/* Closing of Input Div*/}
-
+           <Add/>
           <TextList/>
       {/* <button className="History" >History</button> */}
         {/* Closing of Returning Div */}
