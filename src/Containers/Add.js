@@ -19,30 +19,16 @@ const Add=({qty, dispatch})=>{
 };
 
   return (
-  <div> {/* Opening of Returning Div */}
-     
-      
-      
-      <form className="sub" onSubmit={handleSubmit}>  
-      {/* <div className="input">  opening of Input Div */}
-      Enter the Text :
-     <input className="text"  type="text" ref={el=>(input=el)}  />
-     
-     
-                    {/* <label>&nbsp;</label> */}
-                    <input className="inp"type="submit" value="Submit" />
-     
-        
-      
-         {/* </div>  Closing of Input Div */}
-     
-      </form>
-         
-        
    
-
-    
-      {/* <button className="History" >History</button> */}
+    <div> {/* Opening of Returning Div */}
+        <form className="sub" onSubmit={handleSubmit}>  
+                Enter the Text :
+          <input className="text"  type="text" ref={el=>(input=el)}  />
+          <input className="inp"type="submit" value="Submit" />
+     
+         {/* </div>  Closing of Input Div */}
+        </form>
+         
         {/* Closing of Returning Div */}
    </div> 
   )

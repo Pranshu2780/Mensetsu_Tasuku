@@ -4,7 +4,7 @@ import { updateItem } from '../actions'
 import Item from './Item';
 
 
-const ItemsList = ({ items, updateItem }) => (
+const ItemsList = ({ items, updateItem }) => ( // Mapping all elements
     <ul className={'item-list'}>
         {items.map(item => (
             <Item key={ item.id } {...item} onClick={() => updateItem(item.id)}/>
@@ -12,11 +12,11 @@ const ItemsList = ({ items, updateItem }) => (
     </ul>
 )
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => ({   // Return current state to Components
     items: state.items
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({  // Updating present state
     updateItem: id => dispatch(updateItem(id))
 })
 

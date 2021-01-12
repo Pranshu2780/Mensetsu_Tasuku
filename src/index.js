@@ -6,7 +6,7 @@ import reducers from './reducers';
 import App from './Components/App'
 import ItemsList from './Components/ItemsList';
 
-ReactDom.render(
+ReactDom.render(             // Entering point of Website
 
     <Provider store= {createStore(reducers)}>
       <App />

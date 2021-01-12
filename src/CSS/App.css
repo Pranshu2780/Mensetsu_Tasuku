@@ -7,7 +7,7 @@ body{
    text-align: center;
 }
 
-.text{               /* The Input Box */
+.text{               /* Text WithinThe Input Box */
     margin-left: 1rem;
     border-radius: 12px;
     outline: none;
@@ -15,16 +15,12 @@ body{
     color: green;
 }
 
-.tex{
-    color:white;
-}
-
-.sub{
-    color: white;
+.sub{                  /*Form*/
+    color: white;  
     text-align:center;
 }
 
-.inp{
+.inp{                  /*Submit Button*/
     color: black;
     padding:.2rem;
     padding-left:5px;

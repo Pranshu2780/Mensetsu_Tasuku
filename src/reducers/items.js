@@ -1,10 +1,10 @@
-const items = (state = [], action) => {
+const items = (state = [], action) => {  // Reducer for adding items
     switch (action.type) {
         case 'ADD_ITEMS':
             return [
                 ...state,
                 {
-                    id: action.id,
+                    id: action.id,           // calling previous state and returning updating state
                     text: action.text,
                     completed: false
                 }
@@ -14,7 +14,7 @@ const items = (state = [], action) => {
                 item.id === action.id ? { ...item, completed: !item.completed } : item
             )
         default:
-            return state
+            return state       // Default value
     }
 }
 
