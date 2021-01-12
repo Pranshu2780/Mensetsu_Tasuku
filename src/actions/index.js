@@ -1,8 +1,16 @@
 //Action Creator
-const SelectText=text=>{
+
+let inc=0;
+export const SelectText=item=>{
  return{
     type:'TEXT',
-    payload:text 
+    id: inc++ ,
+    text: item.text 
  };
 };
 
+
+export const updateItem = id => ({
+   type: 'UPDATE_ITEM',
+   id
+});

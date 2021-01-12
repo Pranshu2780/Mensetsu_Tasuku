@@ -1,29 +1,25 @@
 import { combineReducers } from 'redux';
 
-const TextReducer = () =>{
-  return[
-      {
-          title:'Milind'
-      },
-      {
-          title:'Pandey'
-      }
-  ];
-};
-
-const SelectedTextReducer = (SelectedText=[],action) =>{
-  if(action.type ==='TEXT'){
-      return [
-          ... SelectedText,{
-              text: action.text
-          }
-      ];
-  }
-
-  return SelectedText;
-};
+const items = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_ITEMS':
+            return [
+                ...state,
+                {
+                    id: action.id,
+                    text: action.text,
+                    completed: false
+                }
+            ]
+        case 'UPDATE_ITEM':
+            return state.map(item =>
+                item.id === action.id ? { ...item, completed: !item.completed } : item
+            )
+        default:
+            return state
+    }
+}
 
 export default combineReducers({
-    text : SelectedTextReducer,
-    text1 : TextReducer  
+    text : items, 
 });

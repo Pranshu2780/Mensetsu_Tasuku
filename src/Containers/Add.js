@@ -5,37 +5,36 @@ import { SelectText } from '../actions';
 import { connect } from 'react-redux';
 // import TextList from './TextList';
 
-const Add=({dispatch})=>{
+const Add=({qty, dispatch})=>{
   
-   let input;
+   let input,item;
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!input.value.trim()) { return }
+    item = {
+        text: input.value
+    }
+    dispatch(SelectText(item));
+    input.value = '';
+};
 
-  return <div> {/* Opening of Returning Div */}
+  return (
+  <div> {/* Opening of Returning Div */}
      
       
       
-      <form>
-        onSubmit = {
-            e=>{
-                  e.preventDefault();
-
-                  if(!input.value.trim()){
-                      return
-                  }
-
-                  dispatch(SelectText(input.value));
-                  input.value='';
-            }
-        } 
-    
-      <div className="input">  {/* opening of Input Div */}
-      <label className="label"> Enter the Text :
-             <input className="text"  type="text" ref={el=>(input=el)}
-             />
-     </label>
+      <form onSubmit={handleSubmit}>  
+      {/* <div className="input">  opening of Input Div */}
+      <label className="label"> Enter the Text :</label>
+     <input className="text"  type="text" ref={el=>(input=el)}  />
+     
+     <div className={'div-wrapper'}>
+                    <label>&nbsp;</label>
+                    <input type="submit" value="Submit" />
+                </div>
+         {/* <button className="btn" type="submit">Submit</button> */}
       
-         <button className="btn" type="submit">Submit</button>
-      
-         </div>  {/* Closing of Input Div*/}
+         {/* </div>  Closing of Input Div */}
      
       </form>
          
@@ -46,6 +45,7 @@ const Add=({dispatch})=>{
       {/* <button className="History" >History</button> */}
         {/* Closing of Returning Div */}
    </div> 
+  )
 };
 
-export default connect(SelectText)(Add);
+export default connect()(Add);

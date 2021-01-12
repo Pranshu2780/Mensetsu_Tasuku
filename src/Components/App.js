@@ -3,7 +3,6 @@ import ReactDom from 'react-dom';
 import styles from '../CSS/App.css';
 import { SelectText } from '../actions';
 import { connect } from 'react-redux';
-import TextList from './TextList';
 import Add from '../Containers/Add';
 const App=()=>{
   
@@ -11,7 +10,7 @@ const App=()=>{
   return <div> {/* Opening of Returning Div */}
      
            <Add/>
-          <TextList/>
+          {/* <TextList/> */}
       {/* <button className="History" >History</button> */}
         {/* Closing of Returning Div */}
    </div> 
