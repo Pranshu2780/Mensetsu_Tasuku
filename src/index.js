@@ -11,7 +11,25 @@ ReactDom.render(
     <Provider store= {createStore(reducers)}>
       <App />
       <hr/>
-      <ItemsList />
+      <div style={{
+      //  color: '#0095FF',
+       paddingTop:'1rem',
+       cursor: 'pointer',
+       backgroundColor:'pink',
+       fontWeight: 'bold',
+       fontSize: '1rem',
+       animationName:'Stem',
+       animationDuration :'5s',
+       borderBottom: '1px solid red',
+       boxShadow:' 0 2px 4px 2px gray',
+      '@keyframes Stem':{
+        'from' : {left:'0px' },
+        'to' : {left:'10px'}
+       }
+       }} >
+          
+      <ItemsList /></div>
+      
    </Provider>, 
    document.querySelector('#root')
 );

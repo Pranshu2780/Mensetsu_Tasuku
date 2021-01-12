@@ -4,9 +4,6 @@ import PropTypes from 'prop-types'
 const Item = ({ onClick, completed, text, number }) => (
   <li className={'item'}
     onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
   >  
     {text}
   </li>

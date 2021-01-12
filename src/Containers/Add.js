@@ -23,16 +23,16 @@ const Add=({qty, dispatch})=>{
      
       
       
-      <form onSubmit={handleSubmit}>  
+      <form className="sub" onSubmit={handleSubmit}>  
       {/* <div className="input">  opening of Input Div */}
-      <label className="label"> Enter the Text :</label>
+      Enter the Text :
      <input className="text"  type="text" ref={el=>(input=el)}  />
      
-     <div className={'div-wrapper'}>
-                    <label>&nbsp;</label>
-                    <input type="submit" value="Submit" />
-                </div>
-         {/* <button className="btn" type="submit">Submit</button> */}
+     
+                    {/* <label>&nbsp;</label> */}
+                    <input className="inp"type="submit" value="Submit" />
+     
+        
       
          {/* </div>  Closing of Input Div */}
      

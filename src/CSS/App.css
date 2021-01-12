@@ -15,7 +15,17 @@ body{
     color: green;
 }
 
-.btn{               /* Submit Button */
+.tex{
+    color:white;
+}
+
+.sub{
+    color: white;
+    text-align:center;
+}
+
+.inp{
+    color: black;
     padding:.2rem;
     padding-left:5px;
     padding-right:5px;
@@ -26,13 +36,9 @@ body{
     background-color:#FFC400;
 }
 
-.btn:hover {      /* On touching submit button */
-     background-color:#2586C3 ;
-     color: white;
-     cursor: pointer;
-}
 
-.history{
-    align-items: center;
-    
+.inp:hover {      /* On touching submit button */
+    background-color:#2586C3 ;
+    color: white;
+    cursor: pointer;
 }

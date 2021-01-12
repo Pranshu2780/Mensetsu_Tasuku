@@ -1,16 +1,12 @@
-//Action Creator
+let inc = 0;
 
-let inc=0;
-export const SelectText=item=>{
- return{
-    type:'TEXT',
-    id: inc++ ,
-    text: item.text 
- };
-};
-
+export const SelectText = item => ({
+    type: 'ADD_ITEMS',
+    id: inc++,
+    text: item.text
+});
 
 export const updateItem = id => ({
-   type: 'UPDATE_ITEM',
-   id
+    type: 'UPDATE_ITEM',
+    id
 });
